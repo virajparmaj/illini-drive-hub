@@ -1,73 +1,180 @@
-# Welcome to your Lovable project
+# **UIUC License Support Portal**
 
-## Project info
+Helping UIUC students get their Illinois driver’s license — even without a car.
 
-**URL**: https://lovable.dev/projects/9b7eb8f6-db63-4e02-ba06-229bb39e3554
+Bright orange + navy blue themed, full-stack Next.js platform for verified UIUC students to share resources, coordinate DMV help, and receive appointment alerts.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🚀 **Overview**
 
-**Use Lovable**
+Many UIUC students—especially international, out-of-state, and master’s students—don’t own cars.
+This makes the **Illinois road test** difficult because the DMV requires:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/9b7eb8f6-db63-4e02-ba06-229bb39e3554) and start prompting.
+* A car
+* Valid registration
+* Valid insurance
+* A licensed accompanying driver
 
-Changes made via Lovable will be committed automatically to this repo.
+The **UIUC License Support Portal** solves this problem by creating a **secure, UIUC-only community hub** where students can:
 
-**Use your preferred IDE**
+* Learn the **exact end-to-end process** of getting a license
+* **Coordinate** with peers who can offer a ride or allow the use of their car
+* **Post and track DMV appointment openings**
+* Receive **email alerts** when new slots open
+* Build connections in a safe, authenticated environment
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+No payments. No commercial activity. Just students helping students.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## ✨ **Features**
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### 🔐 **UIUC-Only Authentication**
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+* Secure login via **NextAuth.js**
+* Restricted to **@illinois.edu** accounts
+* JWT-based session management
+* Ensures users know exactly who they’re talking to
 
-# Step 3: Install the necessary dependencies.
-npm i
+### 📘 **Step-by-Step License Guide**
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+A clear, student-friendly walkthrough:
+
+1. Required documents
+2. Written test
+3. Vision test
+4. Driving practice
+5. Road test booking
+6. DMV day checklist
+7. After you pass
+
+Built specifically for UIUC needs (international + graduate friendly).
+
+### 🤝 **DMV Buddy Board**
+
+A peer coordination board to:
+
+* Request help for a road test
+* Offer help if you have a car
+* Share practice sessions
+* Coordinate test-day rides
+
+**No car verification, no liability, no payments**—purely a community board.
+
+### 📅 **DMV Appointment Alerts**
+
+* Users subscribe to a date range
+* Others can report when appointment slots open
+* Subscribers automatically receive **email notifications**
+* Helps avoid constantly refreshing the DMV website
+
+### 👤 **User Profiles**
+
+* Name, email, preferences
+* Manage posts
+* Manage appointment alert settings
+
+---
+
+## 🧱 **Tech Stack**
+
+### **Frontend**
+
+* React
+* Next.js (App Router)
+* Tailwind CSS
+
+### **Backend**
+
+* Node.js
+* Next.js API Routes
+* NextAuth.js
+* JWT sessions
+
+### **Database**
+
+* PostgreSQL
+* ORM or SQL migrations (developer choice)
+
+### **Deployment**
+
+* Vercel
+* GitHub repo for CI/CD
+
+### **Security**
+
+* Protected routes via middleware
+* UIUC-only domain restriction
+* Secure cookies
+* Server-side validation
+
+---
+
+## 🎨 **Design & Theme**
+
+Bright **orange** and **navy blue**, inspired by UIUC colors.
+
+* Navy backgrounds
+* Orange buttons, links, and highlights
+* Clean typography, accessible contrast
+* Mobile-first responsive layout
+
+---
+
+## ⚙️ **Environment Variables**
+
+Rename `.env.example` → `.env.local` and set:
+
+```
+DATABASE_URL=postgres://...
+NEXTAUTH_SECRET=...
+NEXTAUTH_URL=https://your-vercel-url.vercel.app
+EMAIL_SERVER=...
+EMAIL_FROM=...
 ```
 
-**Edit a file directly in GitHub**
+(Or Google OAuth restricted to `@illinois.edu`)
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## ❗ **Disclaimers**
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+This platform is:
 
-## What technologies are used for this project?
+* Student-created
+* Not affiliated with UIUC or the Illinois DMV
+* Not responsible for verifying vehicle compliance
+* Not liable for user arrangements or damages
+* Free and non-commercial
 
-This project is built with:
+**All interactions between users are voluntary and at their own risk.**
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
+## 🧪 **Running Locally**
 
-Simply open [Lovable](https://lovable.dev/projects/9b7eb8f6-db63-4e02-ba06-229bb39e3554) and click on Share -> Publish.
+1. Clone repo
+2. Install dependencies:
 
-## Can I connect a custom domain to my Lovable project?
+   ```
+   npm install
+   ```
+3. Add environment variables
+4. Run migrations
+5. Start dev server:
 
-Yes, you can!
+   ```
+   npm run dev
+   ```
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🤝 **Contributions**
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Open to pull requests from the UIUC community.
+Request features, create issues, or contribute guides.
+
+---
+
+## 🧡 Built for UIUC Students
+
+A safe, student-only platform to make the driver’s license process easier, cheaper, and more accessible.
