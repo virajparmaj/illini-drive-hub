@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Car, Users, Calendar } from "lucide-react";
 import { toast } from "sonner";
+import { logger } from "@/lib/logger";
 
 const Landing = () => {
   const [email, setEmail] = useState("");
@@ -12,16 +13,21 @@ const Landing = () => {
   const navigate = useNavigate();
 
   const handleContinue = () => {
+    logger.info("Landing: Continue clicked", { email, school });
+    
     if (!email) {
+      logger.warn("Landing: Empty email attempt");
       toast.error("Please enter your email");
       return;
     }
     
     if (!email.endsWith("@illinois.edu")) {
+      logger.warn("Landing: Invalid email domain", { email });
       toast.error("Only @illinois.edu emails are allowed");
       return;
     }
 
+    logger.info("Landing: Navigating to auth", { email });
     navigate("/auth", { state: { email } });
   };
 
